@@ -12,19 +12,31 @@ namespace OnlineMobileRechargeSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Id"] == null)
+            if (Session["id"] == null)
             {
-                Response.Redirect("./Login.aspx");
+                Response.Redirect("./login.aspx");
             }
-            else
-            {
-                TextBoxNumber.Text = Session["PhoneNum"].ToString();
-            }
+            //else
+            //{
+            //    TextBoxNumber.Text = Session["phonenum"].ToString();
+            //}
         }
 
         protected void ButtonProceed_Click(object sender, EventArgs e)
         {
-            Response.Redirect("./home.aspx");
+             if (TextBoxNumber.Text == "")
+            {
+                Session["p_number"] = null;
+            }
+            else
+            {
+                Session["p_number"] = TextBoxNumber.Text;
+            }
+            var val = Convert.ToInt32(DropDownListProvider.SelectedValue);
+            String url = "packages.aspx?";
+            url += "Id=" + DropDownListProvider.SelectedValue;
+            url += "&tid=" + (((val-1)*6)+1); 
+            Response.Redirect(url);
         }
 
     }

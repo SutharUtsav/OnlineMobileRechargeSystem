@@ -37,17 +37,24 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>
+                                               <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="TextBoxNumber" ValidationExpression="^[+0]{0,2}(91)?[0-9]{10}$">Phone number not valid</asp:RegularExpressionValidator>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td><strong>Operator:<asp:RequiredFieldValidator ID="RequiredFieldValidatorOperator" runat="server" ControlToValidate="DropDownListProvider" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                             </strong></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:DropDownList ID="DropDownListProvider" class="form-control" runat="server">
-                                                <asp:ListItem Value="Select Provider">Select Provider</asp:ListItem>
-                                                <asp:ListItem>JIO</asp:ListItem>
-                                                <asp:ListItem>Vodafone Idea Vi</asp:ListItem>
-                                                <asp:ListItem>Airtel</asp:ListItem>
+                                            <asp:DropDownList ID="DropDownListProvider" class="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="ProviderName" DataValueField="Id">
+                                                <asp:ListItem Value="Select Opeartor">Select Opeartor</asp:ListItem>
                                             </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <br />
                                         </td>
                                     </tr>
                                     <tr>
@@ -93,7 +100,7 @@
                                         </td>
                                     </tr>
                                 </table>
-
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineMobileRechargeSystem %>" SelectCommand="SELECT * FROM [Providers]"></asp:SqlDataSource>
                             </form>
                         </div>
                      </div>

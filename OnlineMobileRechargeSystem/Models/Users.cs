@@ -25,5 +25,7 @@ namespace OnlineMobileRechargeSystem.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        public virtual IEnumerable<ActivePlan> Activeplan { get; set; }
+
     }
 }

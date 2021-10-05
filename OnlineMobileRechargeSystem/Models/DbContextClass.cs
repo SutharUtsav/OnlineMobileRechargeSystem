@@ -15,6 +15,8 @@ namespace OnlineMobileRechargeSystem.Models
         public DbSet<TypeofRecharge> Types { get; set; }
         public DbSet<RechargeList> RechargeList { get; set; }
 
+        public DbSet<ActivePlan> Plans { get; set; }
+
     }
 
     

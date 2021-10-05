@@ -1,0 +1,195 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans KR",sans-serif;
+    background-color: #F3F7F8;
+}
+.upper-part {
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+}
+.upper-part .phonenumber {
+    float: left;
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    position: relative;
+}
+#upperlabel {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    color: #444;
+}
+.upper-part .phonenumber .changebutton {
+    font-size: 12px;
+    padding: 5px 10px;
+    top: -4px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #0C2D3B;
+    color: white;
+    position: absolute;
+    right: 0;
+    margin: 20px 15px;
+}
+.upper-part .tab-link {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.upper-part .tab-link span{
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 600;
+    display: inline-block;
+    color: #666;
+    cursor: pointer;
+}
+a.p_plan {
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 600;
+    display: inline;
+    color: #666;
+    cursor: pointer;
+}
+
+.active{
+    border-color: #0C2D3B;
+    color: #0C2D3B;
+    font-weight: 600;
+}
+
+.upper-part .page_wrap {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.upper-part .page_wrap .page_ctn{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.upper-part .page_wrap .page_ctn.open .page_table{
+    display: block;
+}
+
+.upper-part .page_wrap .page_ctn .page_table{
+    float: left;
+    width: 100%;
+    display: none;
+}
+.upper-part .page_wrap .page_ctn .page_table .table_plans:nth-child(odd) {
+    background: #f8f9fb;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans.tab_adj{
+    margin-left: -20px;
+    position: relative;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans{
+    float: left;
+    padding: 10px 0;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table {
+    display: inline-block;
+    width: 100%;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab.price_wr{
+        /* width: 100px; */
+    text-align: left;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans.tab_adj.discription .tab{
+    width: 83px;
+    float: left;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab{
+    text-align: left;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab span.price{
+    color: #0C2D3B;
+    margin-left: 15px;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab span.price sup {
+    font-weight: 700;
+    font-size: 16px;
+    top: 3px;
+    position: relative;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab span.price sup i{
+    font-size: 16px;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans.tab_adj.discription .tab.btn {
+    width: 125px;
+    float: right;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans .plans_ctn_table .tab .button {
+    font-size: 12px;
+    padding: 7px 20px;
+    top: -4px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #0C2D3B;
+    color: white;
+    min-width: 100px;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans.tab_adj.discription .tab.dis {
+    width: calc(100% - 208px);
+}
+
+.upper-part .page_wrap .page_ctn .page_table .table_plans.tab_adj.discription .tab.dis span{
+    font-weight:400;
+    font-size:14px;
+}

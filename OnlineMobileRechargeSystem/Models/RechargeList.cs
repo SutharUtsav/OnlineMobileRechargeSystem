@@ -23,5 +23,7 @@ namespace OnlineMobileRechargeSystem.Models
         public virtual Provider Provider { get; set; }
         //[ForeignKey("TypeofRecharge.Id")]
         public virtual TypeofRecharge Type { get; set; }
+
+        public virtual IEnumerable<ActivePlan> Activeplan { get; set; }
     }
 }
